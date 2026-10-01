@@ -1,12 +1,15 @@
 <%- include('partials/header') %>
+
 <main>
   <h1><%= title %></h1>
-  <h2>Browse by Category</h2>
+
   <ul class="content-list">
-    <li class="content-item">Environmental</li>
-    <li class="content-item">Educational</li>
-    <li class="content-item">Community Service</li>
-    <li class="content-item">Health and Wellness</li>
+    <% categories.forEach((category) => { %>
+      <li class="content-item">
+        <%= category.name %>
+      </li>
+    <% }) %>
   </ul>
 </main>
+
 <%- include('partials/footer') %>
