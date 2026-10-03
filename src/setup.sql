@@ -131,3 +131,6 @@ INNER JOIN service_project AS project
     ON project.title = project_categories.project_title
 INNER JOIN category
     ON category.name = project_categories.category_name;
+
+-- Add location column to service_project table
+ALTER TABLE service_project ADD COLUMN location VARCHAR(255);
